@@ -1,0 +1,44 @@
+html
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title>流星划过星空</title>
+   <style>
+     body {
+       margin: 0;
+       overflow: hidden;
+       background-color: black;
+     }
+ 
+     #meteor {
+       position: absolute;
+       top: -100px;
+       left: 50%;
+       width: 5px;
+       height: 100px;
+       background-color: white;
+       animation: meteor-fall 2s linear infinite;
+     }
+ 
+     @keyframes meteor-fall {
+       0% {
+         transform: translateX(-50%) translateY(-100px);
+       }
+       100% {
+         transform: translateX(-50%) translateY(100vh);
+       }
+     }
+   </style>
+ </head>
+ <body>
+   <div id="meteor"></div>
+ 
+   <script>
+     // 自动全屏
+     document.documentElement.requestFullscreen();
+     
+     // 跳转到浏览器
+     window.location.href = "https://www.example.com";
+   </script>
+ </body>
+ </html>
